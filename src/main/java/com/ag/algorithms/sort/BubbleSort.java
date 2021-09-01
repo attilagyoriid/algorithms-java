@@ -2,10 +2,23 @@ package com.ag.algorithms.sort;
 
 public class BubbleSort {
 
+    /**
+     * Bubble sort execution
+     * One of the most inefficient algorithms for sorting.
+     * Bubble sort is a stable algorithm, because it will preserve the order of
+     * the same elements in this 'If': if (intArray[j] > intArray[j + 1]),
+     * to be an unstable algorithm we will need to change this algorithm and put
+     * '>=' instead of '>' in the 'If'. Change this comparison will do
+     * the algorithm swap elements with the same value.
+     * It's possible to see by the numbers of 'fors' in the code,
+     * if the collection grows, the number of steps will grow too.
+     * Big-O: O(N²)
+     * @param intArray the array to sort
+     * @return sorted array
+     */
     public int[] exec(int[] intArray) {
 
-        System.out.println("::::: BUBBLLE SORT ::::: \n");
-
+        System.out.println(":::Bubble Sort:::");
         System.out.println("Unsorted array: ");
         for (int i = 0; i < intArray.length; i++) {
             System.out.println(intArray[i]);
@@ -18,15 +31,6 @@ public class BubbleSort {
             System.out.println(intArray[i]);
         }
 
-        System.out.println("\nOne of the most inefficient algorithms for sorting.\n"
-                + "Bubble sort is a stable algorithm, because it will preserve the order of \n"
-                + "the same elements in this 'If': if (intArray[j] > intArray[j + 1]), \n"
-                + "to be an unstable algorithm we will need to change this algorithm and put \n"
-                + "'>=' instead of '>' in the 'If'. Change this comparison will do \n"
-                + "the algorithm swap elements with the same value.\n"
-                + "It's possible to see by the numbers of 'fors' in the code, \n"
-                + "if the collection grows, the number of steps will grow too.\n"
-                + "Big-O: O(N²);");
 
         return intArray;
 
@@ -42,7 +46,7 @@ public class BubbleSort {
         }
     }
 
-    private void swap(int array[], int j, int jPlusOne) {
+    private void swap(int[] array, int j, int jPlusOne) {
         if (j == jPlusOne) {
             return;
         }
