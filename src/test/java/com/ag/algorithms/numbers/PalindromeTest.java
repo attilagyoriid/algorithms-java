@@ -13,4 +13,11 @@ class PalindromeTest {
         Assertions.assertThat(palindrome.checkIsPalindrome(1244214)).isFalse();
         Assertions.assertThat(palindrome.checkIsPalindrome(124421)).isTrue();
     }
+
+    @Test
+    void checkIsPalindromeOptimized() {
+        Palindrome palindrome = new Palindrome();
+        Assertions.assertThat(palindrome.checkIsPalindromeOptimized(1244214)).isFalse();
+        Assertions.assertThat(palindrome.checkIsPalindromeOptimized(124421)).isTrue();
+    }
 }

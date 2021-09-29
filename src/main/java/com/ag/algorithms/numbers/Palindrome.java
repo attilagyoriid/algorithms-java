@@ -14,4 +14,16 @@ public class Palindrome {
         return originalNumber == reverse;
 
     }
+
+    public boolean checkIsPalindromeOptimized(int number) {
+        int reverse = 0;
+
+        while (number > reverse) {
+            int remainder = number % 10;
+            reverse = reverse * 10 + remainder;
+            number = number / 10;
+        }
+        return number == reverse || number == reverse/10;
+
+    }
 }
