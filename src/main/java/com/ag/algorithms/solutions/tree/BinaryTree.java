@@ -1,5 +1,7 @@
 package com.ag.algorithms.solutions.tree;
 
+import java.util.*;
+
 /**
  * ::::: TREES :::::
  *
@@ -29,7 +31,7 @@ package com.ag.algorithms.solutions.tree;
  * 		and everything right to the root is greater than the value of the root, because
  * 		of that, we can do a binary search.
  */
-public class Tree {
+public class BinaryTree {
 
 
     private TreeNode root;
@@ -118,6 +120,31 @@ public class Tree {
 
     public TreeNode getRoot() {
         return root;
+    }
+
+    public List<Integer> breadthFirstSearch() {
+
+        List<Integer> result = new ArrayList<>();
+
+        Deque<TreeNode> queue = new LinkedList<>();
+
+
+        queue.add(root);
+        while (queue.size() > 0) {
+
+            TreeNode currentNode = queue.pop();
+            result.add(currentNode.getData());
+
+            if (currentNode.getLeftChild() != null) {
+                queue.add(currentNode.getLeftChild());
+            }
+            if (currentNode.getRightChild() != null) {
+                queue.add(currentNode.getRightChild());
+            }
+
+        }
+        return result;
+
     }
 
 
