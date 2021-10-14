@@ -38,13 +38,6 @@ public class EmployeeSinglyLinkedList {
     public EmployeeNode getMidPoint() {
         EmployeeNode slowPointer = this.head;
         EmployeeNode fastPointer = this.head;
-        if (this.head == null) {
-            return null;
-        }
-        if (slowPointer == null || slowPointer.getNext() == null) {
-            return slowPointer;
-        }
-
 
         while (fastPointer.getNext() !=null &&fastPointer.getNext().getNext() !=null) {
 
