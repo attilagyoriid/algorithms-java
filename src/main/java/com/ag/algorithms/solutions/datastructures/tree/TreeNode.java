@@ -1,4 +1,4 @@
-package com.ag.algorithms.solutions.tree;
+package com.ag.algorithms.solutions.datastructures.tree;
 
 import java.util.Objects;
 
