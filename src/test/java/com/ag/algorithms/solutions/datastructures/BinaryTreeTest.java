@@ -1,5 +1,7 @@
-package com.ag.algorithms.solutions.tree;
+package com.ag.algorithms.solutions.datastructures;
 
+import com.ag.algorithms.solutions.datastructures.tree.BinaryTree;
+import com.ag.algorithms.solutions.datastructures.tree.TreeNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
